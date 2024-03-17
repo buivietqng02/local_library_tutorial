@@ -1,0 +1,14 @@
+extends layout 
+block content 
+    h1 Author  #{author.name}  
+    p #{author.date_of_birth} -  #{author.date_of_death}  
+    div(style="margin-left:20px; margin-top:20px")
+        h4 Books 
+        if allBook.length 
+            dl
+                each book in allBook
+                    dt  
+                        a(href=book.url) #{book.title}
+                    dd #{book.summary} 
+        else 
+            p There is no books
