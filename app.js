@@ -10,7 +10,7 @@ const catalogRouter= require('./routes/catalog')
 const mongoose=require("mongoose")
 var app = express();
 mongoose.set("strictQuery", false)
-const mongoDB = "mongodb://127.0.0.1:27017/admin"
+const mongoDB = "mongodb+srv://vietbk02:vietbk02@cluster0.8yaqq.mongodb.net/local_library"
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
