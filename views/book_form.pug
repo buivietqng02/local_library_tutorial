@@ -1,0 +1,33 @@
+extends layout 
+
+block content 
+    h1= title 
+    form(method="post")
+        div.form-group 
+            label(for="title") Title :
+            input#title.form-control(type="text" placeholder="name of the book"
+            name="title" required value=(underfined==book) ? '' : book.title) 
+        div.form-group 
+            label(for="author") Author: 
+            select#author.form-control(name="author" required)
+                option(value='') --Please select an author --
+                for author in authors 
+                    if book 
+                        if author._id.toString()==book.author._id.toString()
+                            option(value=author._id selected)  #{author.name} 
+                        else 
+                            option(value=author._id) #{author.name} 
+
+                    else 
+                        option(value=author._id)  #{author.name} 
+        div.form-group 
+            label(for="summary") Summary: 
+            textarea#summary.form-control(placeholder="summary" name="summary" required) 
+            =(undefined==book) ? '' : book.summary
+        div.form-group 
+            label(for="isbn") ISBN: 
+            input#isbn.form-control(type="text" placeholder="ISBN13" name="isbn" value=(undefined==book) ? '' : book.isbn required)
+         
+
+
+

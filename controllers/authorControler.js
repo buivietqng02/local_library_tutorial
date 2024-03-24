@@ -30,7 +30,10 @@ exports.author_create_post= asyncHandler((req,res,next)=> {
     res.send('not implemented: author crewate post')
 })
 exports.author_delete_get= asyncHandler((req, res,next)=> {
-    res.send('not implementrewd: author delete get')
+    
+
+
+    
 })
 exports.author_delete_post= asyncHandler((req,res,next)=> {
     res.send('not implemented: author delete post')
